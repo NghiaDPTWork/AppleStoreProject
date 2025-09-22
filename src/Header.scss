@@ -1,0 +1,69 @@
+// Ứng dụng tạo biến
+$apple-font: "Times New Roman", Times, serif;
+$nav-background: transparent;
+$text-color: #101012;
+$text-hover-color: #ff5e00;
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  html {
+    font-family: $apple-font;
+    font-size: 62.5%;
+
+    body {
+      font-size: 1.7rem;
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  border: #101012;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: $apple-font;
+  height: 500px;
+}
+
+.navbar-block {
+  width: 100%;
+  background-color: $nav-background;
+  backdrop-filter: blur(2rem);
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  height: 4.4rem;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin: 0 1.2rem;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $text-hover-color;
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+}

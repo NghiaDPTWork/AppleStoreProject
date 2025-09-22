@@ -1,0 +1,32 @@
+// Ứng dụng tạo biến
+$apple-font: "Times New Roman", Times, serif;
+$nav-background: transparent;
+$text-color: #101012;
+$text-hover-color: #333336;
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  html {
+    font-family: $apple-font;
+    font-size: 62.5%;
+
+    body {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.container {
+  border: #101012;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: $apple-font;
+  height: 500px;
+}
+
