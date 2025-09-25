@@ -1,0 +1,109 @@
+// Ứng dụng tạo biến
+$apple-font: "Times New Roman", Times, serif;
+$nav-background: transparent;
+$text-color: #101012;
+$text-hover-color: #333336;
+$nav-link-size: 1.4rem;
+$padding-default: 1.5rem 1rem;
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $apple-font;
+  // Base font-size là 10px (1.5rem = 15px)
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.5rem;
+    color: $text-color;
+    background-color: #ffffff;
+  }
+}
+
+.container {
+  // Thuộc tính border: #101012; không hợp lệ, tôi đã sửa lại thành border: 1px solid #101012; (hoặc bỏ đi)
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: $apple-font;
+}
+
+// ------------------------------------
+// BỔ SUNG: Kiểu dáng cho Navigation Bar
+// ------------------------------------
+.navbar {
+  width: 100%;
+  background-color: $nav-background;
+  height: 4.4rem; // Chiều cao thanh điều hướng
+  position: fixed; // Giữ thanh điều hướng cố định trên cùng
+  top: 0;
+  left: 0;
+  z-index: 1000; // Đảm bảo thanh điều hướng nằm trên cùng
+
+  &__content {
+    // Sử dụng container ở đây để giới hạn nội dung
+    max-width: 1350px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; // Căn giữa theo chiều dọc
+    justify-content: space-between; // Dàn đều nội dung
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: $text-color;
+      padding: $padding-default;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+
+    & > li {
+      padding: 0 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: $nav-link-size;
+        font-weight: 400;
+        padding: $padding-default;
+        transition: color 0.3s ease; // Thêm hiệu ứng chuyển đổi
+
+        &:hover {
+          color: $text-hover-color;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    // Ví dụ: Nút tìm kiếm, giỏ hàng...
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      color: $text-color;
+      font-size: $nav-link-size;
+      text-decoration: none;
+      padding: $padding-default;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-hover-color;
+      }
+    }
+  }
+}

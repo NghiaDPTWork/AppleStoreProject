@@ -1,28 +1,30 @@
-// Ứng dụng tạo biến
 $apple-font: "Times New Roman", Times, serif;
 $nav-background: transparent;
 $text-color: #101012;
 $text-hover-color: #ff5e00;
+$nav-height: 4.4rem;
+$padding-vertical: 1rem;
+$link-margin: 1.2rem;
 
 * {
   padding: 0;
   margin: 0;
   outline: none;
   box-sizing: border-box;
+}
 
-  html {
-    font-family: $apple-font;
-    font-size: 62.5%;
+html {
+  font-family: $apple-font;
+  font-size: 62.5%;
+}
 
-    body {
-      font-size: 1.7rem;
-      width: 100%;
-    }
-  }
+body {
+  font-size: 1.7rem;
+  width: 100%;
+  color: $text-color;
 }
 
 .container {
-  border: #101012;
   max-width: 1350px;
   margin: 0 auto;
   display: flex;
@@ -35,10 +37,13 @@ $text-hover-color: #ff5e00;
   width: 100%;
   background-color: $nav-background;
   backdrop-filter: blur(2rem);
-  padding: 1rem 0rem;
+  padding: $padding-vertical 0rem;
   display: flex;
   justify-content: center;
-  height: 4.4rem;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .menu {
@@ -47,23 +52,26 @@ $text-hover-color: #ff5e00;
   padding: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  max-width: 1024px;
 
   li {
-    margin: 0 1.2rem;
+    margin: 0 $link-margin;
+
+    &.menu-item--icon {
+      margin: 0 0.8rem;
+    }
 
     a {
       color: $text-color;
       text-decoration: none;
       transition: color 0.3s ease-in-out;
+      font-size: 1.4rem;
 
       &:hover {
         color: $text-hover-color;
-        text-decoration: underline;
       }
-
     }
-
   }
-
 }
